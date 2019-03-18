@@ -7,10 +7,10 @@ def rules1():
     "New File!"
 
 
-def rules2():
+def rule2():
     pass
 
-def rules3():
+def rule3():
     pass
 
 def About():
@@ -24,8 +24,8 @@ root.config(menu=menu)
 rulemenu = Menu(menu)
 menu.add_cascade(label="File", menu=rulemenu)
 rulemenu.add_command(label="Rule 1", command=rules1)
-rulemenu.add_command(label="Rule 2 ", command=rules2)
-rulemenu.add_command(label="Rule 3 ", command=rules3)
+rulemenu.add_command(label="Rule 2 ", command=rule2)
+rulemenu.add_command(label="Rule 3 ", command=rule3)
 rulemenu.add_separator()
 rulemenu.add_command(label="Exit", command=root.quit)
 

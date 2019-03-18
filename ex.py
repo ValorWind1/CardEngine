@@ -1,7 +1,7 @@
 from tkinter import *
-#import os
-
-
+import tast
+import Images
+import rules1
 
 
 
@@ -76,6 +76,7 @@ ctr_left.bind("<Button-1>",leftClick)
 
 
 # This is the exit/save options toolbar at the very top
+""""
 def doNothing():
     print("...")
 menu = Menu(root)
@@ -93,53 +94,119 @@ editMenu.add_command(label="Redo", command=doNothing)
 
 # Insert Image/print buttons / right side
 
-insertButton = Button(ctr_right,text="Insert picture", command =doNothing)
+insertButton = Button(ctr_right,text="Something x here ?", command =doNothing)
 insertButton.pack(side=TOP,padx=2,pady=5)
-printButton = Button(ctr_right,text="Insert music", command =doNothing)
-printButton.pack(side=TOP,padx=2,pady=5)
+#printButton = Button(ctr_right,text="Insert music", command =doNothing)
+#printButton.pack(side=TOP,padx=2,pady=5)
+"""
+# ---------------------------------------Module Rules ----------------------------------------------------
+def rule1():
+    rules1.rules1()
+
+def rule2():
+    rules1.rules2()
+
+def rule3():
+    rules1.rules3()
+
+def About():
+    rules1.About()
+
+menu = Menu(root)
+root.config(menu=menu)
+rulemenu = Menu(menu)
+menu.add_cascade(label="File", menu=rulemenu)
+rulemenu.add_command(label="Rule 1", command=rules1)
+rulemenu.add_command(label="Rule 2 ", command=rule2)
+rulemenu.add_command(label="Rule 3 ", command=rule3)
+rulemenu.add_separator()
+rulemenu.add_command(label="Exit", command=root.quit)
+
+helpmenu = Menu(menu)
+menu.add_cascade(label="Help", menu=helpmenu)
+helpmenu.add_command(label="Help About Rules ...", command=About)
 
 
 
-# second row of right buttons
 
-insertButton = Button(ctr_right,text="Deck", command =doNothing)
+#--------------------------------------end of rules module ------------------------------------------------
+
+# ---------------------------------------- MODULE MUSIC !!!!-----------------------------------------------
+
+def browseMF():
+    tast.browse_file()
+
+printButton = Button(ctr_right, text="Browse Music File", command=browseMF)
+printButton.pack(side=TOP, padx=2, pady=5)
+
+def playM():
+    tast.playM()
+insertButton = Button(ctr_right,text="Play Music", command =playM)
 insertButton.pack(side=TOP,padx=2,pady=5)
-printButton = Button(ctr_right,text="Multiply", command =doNothing)
+
+def stopM():
+    tast.stopM()
+
+printButton = Button(ctr_right,text="Stop Music", command =stopM)
 printButton.pack(side=TOP,padx=2,pady=5)
 
 ctr_right.grid(row=0, column=2, sticky="ns")
 
+# --------------------------------- end of Module Music ----------------------------------------------------------
+
+# --------------------------------- Picture Module --------------------------------------------------------------
+def browseIM():
+    Images.browse_fileIM()
+
+insertButton2 = Button(ctr_left,text=" Browse Image File", command =browseIM)
+insertButton2.pack(side=TOP,padx=2,pady=5)
+
+def playIM():
+    Images.playIM()
+
+insertButton1 = Button(ctr_left,text="Display image", command= playIM)
+insertButton1.pack(side=TOP,padx=2,pady=5)
+
+def stopIM():
+    Images.stopIM()
+
+printButton2 = Button(ctr_left,text="Stop Displaying image", command =stopIM)
+printButton2.pack(side=TOP,padx=2,pady=5)
+
+ctr_left.grid(row=0, column=0, sticky="ns")
+
+
+
+
+# ---------------------------------- end of picture Module --------------------------------------------------------
+
+
 # Insert buttons / left side
 
-insertButton1 = Button(ctr_left,text="Game Rules", command =doNothing)
-insertButton1.pack(side=TOP,padx=2,pady=5)
-printButton1 = Button(ctr_left,text=" Card Labels", command =doNothing()).pack()
-insertButton1.pack(side=TOP,padx=2,pady=5)
+
+#printButton1 = Button(ctr_left,text=" Card Labels", command =doNothing()).pack()
+#insertButton1.pack(side=TOP,padx=2,pady=5)
 #os.system("TKinterDB.py")
 # insertbutton 1 at the top 2 lines
 
 
 #2nd row of buttons
 
-insertButton2 = Button(ctr_left,text="Music", command =doNothing)
-insertButton2.pack(side=TOP,padx=2,pady=5)
-printButton2 = Button(ctr_left,text="effects", command =doNothing)
-printButton2.pack(side=TOP,padx=2,pady=5)
 
-ctr_left.grid(row=0, column=0, sticky="ns")
+
 
 
 # photos !!
 
-photo = PhotoImage(file="p5.gif")
-labelp = Label(root,image=photo)
-labelp.grid(row=0,sticky="s",pady = "2")
+#hoto = PhotoImage(file="p5.gif")
+#labelp = Label(root,image=photo)
+#labelp.grid(row=0,sticky="s",pady = "2")
 
 # bottom pic
 
-photo1 = PhotoImage(file="p1.gif")
-labelp1 = Label(btm_frame2,image=photo1)
-labelp1.grid(row=0,padx=5,pady = 5)
+#photo1 = PhotoImage(file="p1.gif")
+#labelp1 = Label(btm_frame2,image=photo1)
+#labelp1.grid(row=0,padx=5,pady = 5)
 
 # TKINTER DB PROGRAM
 
@@ -147,5 +214,9 @@ labelp1.grid(row=0,padx=5,pady = 5)
 
 #mbutton = Button(text = "Let's Go", command= openProgram).pack()
 
+def main ():
 
-root.mainloop()
+   root.mainloop()
+
+if __name__ == '__main__':
+    main()
