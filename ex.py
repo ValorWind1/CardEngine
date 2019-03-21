@@ -2,8 +2,7 @@ from tkinter import *
 import tast
 import Images
 import rules1
-
-
+import loadData
 
 root = Tk()
 root.title('Card Game engine')
@@ -170,7 +169,7 @@ insertButton1.pack(side=TOP,padx=2,pady=5)
 def stopIM():
     Images.stopIM()
 
-printButton2 = Button(ctr_left,text="Stop Displaying image", command =stopIM)
+printButton2 = Button(ctr_left,text="Location of image", command =stopIM)
 printButton2.pack(side=TOP,padx=2,pady=5)
 
 ctr_left.grid(row=0, column=0, sticky="ns")
@@ -180,12 +179,38 @@ ctr_left.grid(row=0, column=0, sticky="ns")
 
 # ---------------------------------- end of picture Module --------------------------------------------------------
 
+#----------------------------------- Creating an Object , and Loading Object -------------------------------------
+
+def openProgram():
+    loadData.main()
+printButton3 = Button(ctr_left,text=" Create card", command =openProgram)
+printButton3.pack(side=TOP,padx=2,pady=5)
+
+#def saveData():
+    #Inputs.saveData()
+
+#printButton4 = Button(ctr_left,text=" Save Inputs ", command =userInputs)
+#printButton4.pack(side=TOP,padx=2,pady=5)
+
+#def loadData():
+    #Inputs.loadData()
+
+#printButton5 = Button(ctr_left,text=" Load the data of your card   ", command =userInputs)
+#printButton5.pack(side=TOP,padx=2,pady=5)
+
+#def StoredData():
+    #Inputs.usResult()
+
+#printButton5 = Button(ctr_left,text=" Current Cards on our system  ", command =userInputs)
+#printButton5.pack(side=TOP,padx=2,pady=5)
+
+
+#----------------------------------end of creating/loading object--------------------------------------------------
 
 # Insert buttons / left side
 
 
-#printButton1 = Button(ctr_left,text=" Card Labels", command =doNothing()).pack()
-#insertButton1.pack(side=TOP,padx=2,pady=5)
+
 #os.system("TKinterDB.py")
 # insertbutton 1 at the top 2 lines
 

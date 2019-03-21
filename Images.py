@@ -1,9 +1,8 @@
 import tkinter.messagebox
-from tkinter import *
+from tkinter import Label,Button,Menu,Tk
 from tkinter import filedialog
-from pygame import mixer
-import pygame
 from PIL import Image, ImageTk
+
 import ex
 
 root =Tk()
@@ -17,7 +16,7 @@ def browse_fileIM():
     global picturefile
     picturefile = filedialog.askopenfilename(filetypes=[("Image File", '.jpg')])
 
-    print(picturefile)
+
 menubar.add_cascade(label="File", menu= submenu)
 submenu.add_command(label="Open", command = browse_fileIM)
 submenu.add_command(label="Exit", command = root.destroy)
@@ -30,7 +29,7 @@ root.title("Picture")
 text = Label(root , text = "Choose your picture")
 text.pack()
 
-
+size = 128, 128
 
 
 def playIM():
@@ -47,7 +46,10 @@ def playIM():
         print("Error")
 
 def stopIM():
-    pass
+    print(picturefile)
+
+
+
 
 play = Button(root,text="Open Image", width=30, command=playIM)
 play.pack()
