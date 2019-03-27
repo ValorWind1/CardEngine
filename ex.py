@@ -4,6 +4,7 @@ import Images
 import rules1
 import loadData
 import ugotMail
+import dateCalendar
 
 root = Tk()
 root.title('Card Game engine')
@@ -25,7 +26,7 @@ top_frame.grid(row=0, sticky="ew")
 center.grid(row=1, sticky="nsew")
 btm_frame.grid(row=3, sticky="ew")
 btm_frame2.grid(row=4, sticky="ew")
-label_1.grid(row=4, sticky=E)
+label_1.grid(row=4, padx="5",pady="10",sticky=E)
 
 
 # Top frame Widgets
@@ -184,7 +185,7 @@ ctr_left.grid(row=0, column=0, sticky="ns")
 
 def openProgram():
     loadData.main()
-printButton3 = Button(ctr_left,text=" Create card", command =openProgram)
+printButton3 = Button(ctr_left,text=" Create cards", command =openProgram)
 printButton3.pack(side=TOP,padx=2,pady=5)
 
 #def saveData():
@@ -217,10 +218,15 @@ c.grid(row=0,sticky="se",pady = "10")
 #printButton4 = Button(ctr_left,text=" Save Inputs ", command =openEmail)
 #printButton4.pack(side=TOP,padx=2,pady=5)
 
+# ---------------------------------Calendar/Timer
+def datetime():
+    dateCalendar.dateTime()
 
-
+g = Checkbutton(root, text=" Current Time/ Calendar",command = datetime)
+g.grid(row=4,sticky="sw",padx= "5",pady = "20")
 
 # Insert buttons / left side
+
 
 
 

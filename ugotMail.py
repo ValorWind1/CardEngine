@@ -1,6 +1,7 @@
 # import os
 import smtplib
 import config
+from tkinter import messagebox
 #
 # EMAIL_ADDRESS = os.environ.get("skyjdani@gmail.com")
 # EMAIL_PASSWORD = os.environ.get("rzwjaneemlbtivbv")
@@ -37,6 +38,7 @@ def main():
     subject = " Card game Engine Welcomes you!"
     msg= " We are happy that you're using our engine!"
     send_email(subject,msg)
+    messagebox.showinfo("Email Status:","Success: Email sent!")
 
 if __name__ == '__main__':
     main()
