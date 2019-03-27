@@ -3,6 +3,7 @@ import tast
 import Images
 import rules1
 import loadData
+import ugotMail
 
 root = Tk()
 root.title('Card Game engine')
@@ -14,7 +15,7 @@ center = Frame(root, bg='black', width=50, height=40, padx=3, pady=3)
 btm_frame = Frame(root, bg='snow', width=450, height=45, pady=3)
 btm_frame2 = Frame(root, bg='red3', width=450, height=60, pady=3)
 label_1 = Label(root, text = " Jose Acevedo , Daniel Leyghton",bg ="snow")
-c = Checkbutton(root, text=" Create Card size")
+#c = Checkbutton(root, text=" Create Card size")
 
 
 # boxes main Layout
@@ -40,7 +41,7 @@ width_label.grid(row=2, column=0)
 length_label.grid(row=2, column=5)
 entry_W.grid(row=2, column=1)
 entry_L.grid(row=2, column=6)
-c.grid(row=0,sticky="se",pady = "10")
+#c.grid(row=0,sticky="se",pady = "10")
 label_2= Label(root, text = "Card Preview",bg ="snow")
 
 # Center Widgets
@@ -206,6 +207,18 @@ printButton3.pack(side=TOP,padx=2,pady=5)
 
 
 #----------------------------------end of creating/loading object--------------------------------------------------
+
+#-----------------------------------Email program
+def openEmail():
+    ugotMail.main()
+
+c = Checkbutton(root, text=" Create Email",command = openEmail)
+c.grid(row=0,sticky="se",pady = "10")
+#printButton4 = Button(ctr_left,text=" Save Inputs ", command =openEmail)
+#printButton4.pack(side=TOP,padx=2,pady=5)
+
+
+
 
 # Insert buttons / left side
 
