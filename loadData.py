@@ -21,22 +21,24 @@ def load():
 
 def start():
     while True:
-        UserInputs.nm= input('Card Name: ')
-        UserInputs.lbl = input('Card Label: ')
-        UserInputs.dmg = input('Card Dmg: ')
-        UserInputs.hp = input('Card Hp: ')
+        UserInputs.nm= input('Card Name:')
+        UserInputs.lbl = input('Card Label:')
+        UserInputs.dmg = input('Card Dmg:')
+        UserInputs.hp = input('Card Hp:')
 
         with open("output.txt", "a") as file:
-                file.write(UserInputs.nm + "\n")
-                file.write(UserInputs.lbl + "\n")
-                file.write(UserInputs.dmg + "\n")
-                file.write(UserInputs.hp + "\n\n")
+                file.write(UserInputs.nm+" ")
+                file.write(UserInputs.lbl+" " )
+                file.write(UserInputs.dmg+" " )
+                file.write(UserInputs.hp+" " )
         file.close()
         UserInputs.qt = input("Do you want to create a new card ? y/n ")
         if UserInputs.qt =="n":
             break
 
-
+#def readData ():
+    #file = open ( "output.txt", "r")
+    #print (file.read())
 
 
 
@@ -45,7 +47,8 @@ def main ():
     start()
     save(UserInputs)
     loaded_player = load()
-    print (loaded_player.hp, loaded_player.dmg,loaded_player.lbl,loaded_player.nm,loaded_player.qt)
-
+    print (loaded_player.hp,loaded_player.dmg,loaded_player.lbl,loaded_player.nm,loaded_player.qt)
+    print ( " ---- ")
+    #readData()
 if __name__ == '__main__':
     main()

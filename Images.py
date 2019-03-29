@@ -29,13 +29,15 @@ root.title("Picture")
 text = Label(root , text = "Choose your picture")
 text.pack()
 
-size = 128, 128
+
 
 
 def playIM():
     try:
         im = Image.open(picturefile)
-        tkimage = ImageTk.PhotoImage(im)
+        new_img = im.resize((130, 200))
+        new_img.save("Image File Resized", "JPEG", optimize=True)
+        tkimage = ImageTk.PhotoImage(new_img)
         label1 = Label(ex.ctr_mid, image = tkimage)
         label1.image = tkimage
         label1.pack()

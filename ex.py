@@ -5,6 +5,8 @@ import rules1
 import loadData
 import ugotMail
 import dateCalendar
+import displayCards
+
 
 root = Tk()
 root.title('Card Game engine')
@@ -15,7 +17,7 @@ top_frame = Frame(root, bg='red3', width=650, height=700, pady=10)
 center = Frame(root, bg='black', width=50, height=40, padx=3, pady=3)
 btm_frame = Frame(root, bg='snow', width=450, height=45, pady=3)
 btm_frame2 = Frame(root, bg='red3', width=450, height=60, pady=3)
-label_1 = Label(root, text = " Jose Acevedo , Daniel Leyghton",bg ="snow")
+label_1 = Label(root, text = " Jose Acevedo , Daniel Leyghton",bg ="SkyBlue1")
 #c = Checkbutton(root, text=" Create Card size")
 
 
@@ -33,8 +35,8 @@ label_1.grid(row=4, padx="5",pady="10",sticky=E)
 model_label = Label(top_frame,text='Card Maker',bg="snow")
 width_label = Label(top_frame, text='Width:')
 length_label = Label(top_frame, text='Length:')
-entry_W = Entry(top_frame, background="snow")
-entry_L = Entry(top_frame, background="snow")
+entry_W = Label(top_frame,text = " 130 ", background="SkyBlue1")
+entry_L = Label(top_frame,text = " 200 ", background="SkyBlue1")
 
 # Top Frame widgets Layout
 model_label.grid(row=0, columnspan=3,sticky=W,pady = 5)
@@ -225,10 +227,19 @@ def datetime():
 g = Checkbutton(root, text=" Current Time/ Calendar",command = datetime)
 g.grid(row=4,sticky="sw",padx= "5",pady = "20")
 
-# Insert buttons / left side
+# --------------------------------- Print Cards / Math
 
+def printcards():
+    displayCards.openCards()
 
+printButton4 = Button(ctr_right,text="Print Stored Cards", command =printcards)
+printButton4.pack(side=TOP,padx=2,pady=5)
 
+def mathCards():
+    displayCards.main()
+
+printButton5 = Button(ctr_right,text="Card vs Card", command =mathCards)
+printButton5.pack(side=TOP,padx=2,pady=5)
 
 #os.system("TKinterDB.py")
 # insertbutton 1 at the top 2 lines
@@ -242,15 +253,16 @@ g.grid(row=4,sticky="sw",padx= "5",pady = "20")
 
 # photos !!
 
-#hoto = PhotoImage(file="p5.gif")
-#labelp = Label(root,image=photo)
-#labelp.grid(row=0,sticky="s",pady = "2")
+photo2 = PhotoImage(file="1949852.png")
+labelp2 = Label(root,image=photo2,bg="red3")
+
+labelp2.grid(row=4,sticky="s",pady = "2")
 
 # bottom pic
 
-#photo1 = PhotoImage(file="p1.gif")
-#labelp1 = Label(btm_frame2,image=photo1)
-#labelp1.grid(row=0,padx=5,pady = 5)
+photo1 = PhotoImage(file="p1.gif")
+labelp1 = Label(root,image=photo1)
+labelp1.grid(row=0,sticky="s",padx= 5 ,pady = 5)
 
 # TKINTER DB PROGRAM
 
