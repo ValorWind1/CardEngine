@@ -6,5 +6,6 @@ def openingMyweb():
 
 def main ():
     openingMyweb()
+
 if __name__ == '__main__':
     openingMyweb()
