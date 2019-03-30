@@ -6,7 +6,7 @@ import loadData
 import ugotMail
 import dateCalendar
 import displayCards
-
+import myWeb
 
 root = Tk()
 root.title('Card Game engine')
@@ -216,7 +216,7 @@ def openEmail():
     ugotMail.main()
 
 c = Checkbutton(root, text=" Create Email",command = openEmail)
-c.grid(row=0,sticky="se",pady = "10")
+c.grid(row=0,sticky="se",padx = 5, pady = "10")
 #printButton4 = Button(ctr_left,text=" Save Inputs ", command =openEmail)
 #printButton4.pack(side=TOP,padx=2,pady=5)
 
@@ -241,10 +241,13 @@ def mathCards():
 printButton5 = Button(ctr_right,text="Card vs Card", command =mathCards)
 printButton5.pack(side=TOP,padx=2,pady=5)
 
-#os.system("TKinterDB.py")
-# insertbutton 1 at the top 2 lines
+#---------------------------------- Web Module
 
+def openingWebsite():
+    myWeb.main()
 
+printButton6 = Button(ctr_left,text=" Card Website", command =openingWebsite,bg="gold")
+printButton6.pack(side=TOP,padx=2,pady=5,)
 #2nd row of buttons
 
 

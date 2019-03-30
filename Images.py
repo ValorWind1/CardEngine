@@ -33,7 +33,9 @@ text.pack()
 
 
 def playIM():
+
     try:
+        global new_img
         im = Image.open(picturefile)
         new_img = im.resize((130, 200))
         new_img.save("Image File Resized", "JPEG", optimize=True)
@@ -48,7 +50,8 @@ def playIM():
         print("Error")
 
 def stopIM():
-    print(picturefile)
+    print (picturefile)
+
 
 
 
