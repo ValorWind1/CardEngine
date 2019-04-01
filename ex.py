@@ -7,6 +7,8 @@ import ugotMail
 import dateCalendar
 import displayCards
 import myWeb
+import results
+import imagesOpponent
 
 root = Tk()
 root.title('Card Game engine')
@@ -161,13 +163,13 @@ ctr_right.grid(row=0, column=2, sticky="ns")
 def browseIM():
     Images.browse_fileIM()
 
-insertButton2 = Button(ctr_left,text=" Browse Image File", command =browseIM)
+insertButton2 = Button(ctr_left,text=" Browse Your Card Image", command =browseIM,bg="light coral")
 insertButton2.pack(side=TOP,padx=2,pady=5)
 
 def playIM():
     Images.playIM()
 
-insertButton1 = Button(ctr_left,text="Display image", command= playIM)
+insertButton1 = Button(ctr_left,text="Display Your Card", command= playIM,bg="light coral")
 insertButton1.pack(side=TOP,padx=2,pady=5)
 
 def stopIM():
@@ -178,8 +180,20 @@ printButton2.pack(side=TOP,padx=2,pady=5)
 
 ctr_left.grid(row=0, column=0, sticky="ns")
 
+def BrowseIMO():
+    imagesOpponent.browse_fileIM1()
+
+insertButton8 = Button(ctr_left,text=" Browse Opponent Card Image", command = BrowseIMO, bg= "dark turquoise")
+insertButton8.pack(side=TOP,padx=2,pady=5)
 
 
+def playIMO():
+    imagesOpponent.playI1()
+
+printButton9 = Button(ctr_left,text="Display Opponent Card", command = playIMO, bg= "dark turquoise")
+printButton9.pack(side=TOP,padx=2,pady=5)
+
+ctr_left.grid(row=0, column=0, sticky="ns")
 
 # ---------------------------------- end of picture Module --------------------------------------------------------
 
@@ -250,6 +264,12 @@ printButton6 = Button(ctr_left,text=" Card Website", command =openingWebsite,bg=
 printButton6.pack(side=TOP,padx=2,pady=5,)
 #2nd row of buttons
 
+#------------------------------- result display
+def dispayingResults():
+    results.main()
+
+printButton7 = Button(ctr_right,text="Display Results", command =dispayingResults)
+printButton7.pack(side=TOP,padx=2,pady=5)
 
 
 

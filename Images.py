@@ -35,14 +35,17 @@ text.pack()
 def playIM():
 
     try:
+
         global new_img
         im = Image.open(picturefile)
-        new_img = im.resize((130, 200))
-        new_img.save("Image File Resized", "JPEG", optimize=True)
+        new_img = im.resize((150, 250))
+        new_img.save("ImageFile.png", "JPEG", optimize=True)
         tkimage = ImageTk.PhotoImage(new_img)
         label1 = Label(ex.ctr_mid, image = tkimage)
         label1.image = tkimage
-        label1.pack()
+        label1.pack(side="left",padx=2,pady=5)
+
+
 
 
     except:

@@ -1,5 +1,4 @@
-import re
-import math
+
 def openCards():
     file = open ("output.txt","r")
     print(file.read())
@@ -42,10 +41,10 @@ def substractCards():
 
 
 
-
 def main ():
     openCards()
     substractCards()
+
 if __name__ == '__main__':
     main()
 
