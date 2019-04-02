@@ -38,7 +38,10 @@ def substractCards():
     print(output1)
 
     print(result1)
-
+    if result1>result:
+        print("The winner is player 1 ! Congratulations " " by "+ str(result1)+"Value points")
+    else :
+        print ("The winner is player 2 ! Congratulations"" by "+ str(result1)+" Value points ")
 
 
 def main ():

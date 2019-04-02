@@ -9,6 +9,8 @@ import displayCards
 import myWeb
 import results
 import imagesOpponent
+import displayInt
+
 
 root = Tk()
 root.title('Card Game engine')
@@ -266,12 +268,17 @@ printButton6.pack(side=TOP,padx=2,pady=5,)
 
 #------------------------------- result display
 def dispayingResults():
-    results.main()
+    results.showPicResults()
 
-printButton7 = Button(ctr_right,text="Display Results", command =dispayingResults)
+printButton7 = Button(ctr_right,text="Display Cards", command =dispayingResults)
 printButton7.pack(side=TOP,padx=2,pady=5)
 
+#------------------------------ display int
+def displayint():
+    displayInt.displayint()
 
+printButton10 = Button(ctr_right,text="Display int Results", command =displayint)
+printButton10.pack(side=TOP,padx=2,pady=5)
 
 
 # photos !!
@@ -286,6 +293,7 @@ labelp2.grid(row=4,sticky="s",pady = "2")
 photo1 = PhotoImage(file="p1.gif")
 labelp1 = Label(root,image=photo1)
 labelp1.grid(row=0,sticky="s",padx= 5 ,pady = 5)
+
 
 # TKINTER DB PROGRAM
 
