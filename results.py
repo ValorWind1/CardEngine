@@ -20,7 +20,7 @@ def showPicResults():
     tkimage1 = ImageTk.PhotoImage(image1)
     label1 = Label(ex.ctr_mid, image=tkimage1)
     label1.image = tkimage1
-    label1.pack(side="left")
+    label1.pack(side="right")
 
 def showDataResults():
     displayCards.main()

@@ -248,7 +248,7 @@ g.grid(row=4,sticky="sw",padx= "5",pady = "20")
 def printcards():
     displayCards.openCards()
 
-printButton4 = Button(ctr_right,text="Print Stored Cards", command =printcards)
+printButton4 = Button(ctr_right,text=" All cards info.", command =printcards)
 printButton4.pack(side=TOP,padx=2,pady=5)
 
 def mathCards():
@@ -270,14 +270,14 @@ printButton6.pack(side=TOP,padx=2,pady=5,)
 def dispayingResults():
     results.showPicResults()
 
-printButton7 = Button(ctr_right,text="Display Cards", command =dispayingResults)
+printButton7 = Button(ctr_right,text="Display Cards entered", command =dispayingResults)
 printButton7.pack(side=TOP,padx=2,pady=5)
 
 #------------------------------ display int
 def displayint():
     displayInt.displayint()
 
-printButton10 = Button(ctr_right,text="Display int Results", command =displayint,bg="OliveDrab2")
+printButton10 = Button(ctr_right,text="Display integers entered ", command =displayint,bg="OliveDrab2")
 printButton10.pack(side=TOP,padx=2,pady=5)
 
 
