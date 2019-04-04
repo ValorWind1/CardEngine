@@ -143,18 +143,18 @@ helpmenu.add_command(label="Help About Rules ...", command=About)
 def browseMF():
     tast.browse_file()
 
-printButton = Button(ctr_right, text="Browse Music File", command=browseMF)
+printButton = Button(ctr_right, text="Browse Music File", command=browseMF,bg="medium orchid")
 printButton.pack(side=TOP, padx=2, pady=5)
 
 def playM():
     tast.playM()
-insertButton = Button(ctr_right,text="Play Music", command =playM)
+insertButton = Button(ctr_right,text="Play Music", command =playM,bg="medium orchid")
 insertButton.pack(side=TOP,padx=2,pady=5)
 
 def stopM():
     tast.stopM()
 
-printButton = Button(ctr_right,text="Stop Music", command =stopM)
+printButton = Button(ctr_right,text="Stop Music", command =stopM,bg="medium orchid")
 printButton.pack(side=TOP,padx=2,pady=5)
 
 ctr_right.grid(row=0, column=2, sticky="ns")
@@ -254,7 +254,7 @@ printButton4.pack(side=TOP,padx=2,pady=5)
 def mathCards():
     displayCards.main()
 
-printButton5 = Button(ctr_right,text="Card vs Card", command =mathCards)
+printButton5 = Button(ctr_right,text="Card vs Card", command =mathCards,bg="firebrick3")
 printButton5.pack(side=TOP,padx=2,pady=5)
 
 #---------------------------------- Web Module
@@ -277,7 +277,7 @@ printButton7.pack(side=TOP,padx=2,pady=5)
 def displayint():
     displayInt.displayint()
 
-printButton10 = Button(ctr_right,text="Display int Results", command =displayint)
+printButton10 = Button(ctr_right,text="Display int Results", command =displayint,bg="OliveDrab2")
 printButton10.pack(side=TOP,padx=2,pady=5)
 
 
