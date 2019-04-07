@@ -10,7 +10,7 @@ import myWeb
 import results
 import imagesOpponent
 import displayInt
-
+import displaying_txtData
 
 root = Tk()
 root.title('Card Game engine')
@@ -279,6 +279,14 @@ def displayint():
 
 printButton10 = Button(ctr_right,text="Display integers entered ", command =displayint,bg="OliveDrab2")
 printButton10.pack(side=TOP,padx=2,pady=5)
+
+# ------------------------------ display int to gui
+def displayguiint():
+    displaying_txtData.displaynumbersGui()
+
+printButton11 = Button(ctr_left,text="Visually see values  ", command =displayguiint,bg="dodgerblue")
+printButton11.pack(side=TOP,padx=0,pady=0)
+
 
 
 # photos !!
