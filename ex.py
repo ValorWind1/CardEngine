@@ -23,7 +23,7 @@ top_frame = Frame(root, bg='red3', width=650, height=700, pady=10)
 center = Frame(root, bg='black', width=50, height=40, padx=3, pady=3)
 btm_frame = Frame(root, bg='snow', width=450, height=45, pady=3)
 btm_frame2 = Frame(root, bg='red3', width=450, height=60, pady=3)
-label_1 = Label(root, text = " Jose Acevedo , Daniel Leyghton",bg ="SkyBlue1")
+label_1 = Label(root, text = " Jose Acevedo , Daniel Leyghton",bg ="azure")
 #c = Checkbutton(root, text=" Create Card size")
 
 
@@ -41,8 +41,8 @@ label_1.grid(row=4, padx="5",pady="10",sticky=E)
 model_label = Label(top_frame,text='Card Maker',bg="snow")
 width_label = Label(top_frame, text='Width:')
 length_label = Label(top_frame, text='Length:')
-entry_W = Label(top_frame,text = " 130 ", background="SkyBlue1")
-entry_L = Label(top_frame,text = " 200 ", background="SkyBlue1")
+entry_W = Label(top_frame,text = " 130 ", background="azure")
+entry_L = Label(top_frame,text = " 200 ", background="azure")
 
 # Top Frame widgets Layout
 model_label.grid(row=0, columnspan=3,sticky=W,pady = 5)
@@ -57,9 +57,9 @@ label_2= Label(root, text = "Card Preview",bg ="snow")
 center.grid_rowconfigure(0, weight=1)
 center.grid_columnconfigure(1, weight=1)
 
-ctr_left = Frame(center, bg='snow', width=300, height=190, padx=50, pady=50)
-ctr_mid = Frame(center, bg='linen', width=300, height=190, padx=50, pady=50)
-ctr_right = Frame(center, bg='snow', width=300, height=190, padx=50, pady=50)
+ctr_left = Frame(center, bg='snow', width=300, height=190, padx=5, pady=5)
+ctr_mid = Frame(center, bg='linen', width=300, height=190, padx=5, pady=5)
+ctr_right = Frame(center, bg='snow', width=300, height=190, padx=5, pady=5)
 
 label_2.grid(row=1, sticky="n",pady = "10")
 ctr_left.grid(row=0, column=0, sticky="ns")
@@ -72,12 +72,6 @@ ctr_right.grid(row=0, column=2, sticky="ns")
 
 
     # this is where we call the main function that was defined in the other program
-
-
-
-
-
-
 # Mouse event if you click center-right most widget
 def leftClick(event):
     print(" OK")
@@ -303,6 +297,19 @@ labelp2.grid(row=4,sticky="s",pady = "2")
 photo1 = PhotoImage(file="p1.gif")
 labelp1 = Label(root,image=photo1)
 labelp1.grid(row=0,sticky="s",padx= 5 ,pady = 5)
+
+photo3 = PhotoImage(file ="rcLo6KGpi.png")
+labelp3 = Label(ctr_right,image=photo3,bg="snow")
+labelp3.pack(side= BOTTOM,padx=0,pady=0)
+
+
+photo4 = PhotoImage(file ="laurel-wreath-transparent-1154small.png")
+labelp4 = Label(ctr_left,image=photo4,bg="snow")
+labelp4.pack(side= BOTTOM,padx=0,pady=0)
+
+
+
+
 
 def main ():
 
