@@ -294,8 +294,8 @@ labelp2.grid(row=4,sticky="s",pady = "2")
 
 # bottom pic
 
-photo1 = PhotoImage(file="p1.gif")
-labelp1 = Label(root,image=photo1)
+photo1 = PhotoImage(file="13-watercolor-bird-silhouette-small.png")
+labelp1 = Label(root,image=photo1,bg="red3")
 labelp1.grid(row=0,sticky="s",padx= 5 ,pady = 5)
 
 photo3 = PhotoImage(file ="rcLo6KGpi.png")
