@@ -33,4 +33,10 @@ helpmenu = Menu(menu)
 menu.add_cascade(label="Help", menu=helpmenu)
 helpmenu.add_command(label="Help About Rules ...", command=About)
 
-mainloop()
+def main ():
+   rule2()
+   rule3()
+   About()
+   mainloop()
+if __name__ == '__main__':
+    main()

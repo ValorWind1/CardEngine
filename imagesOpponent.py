@@ -5,12 +5,12 @@ from PIL import Image, ImageTk
 
 import ex
 
-root = Tk()
+#root = Tk()
 
-menubar = Menu(root)
-root.config(menu=menubar)
+#menubar = Menu(root)
+#root.config(menu=menubar)
 
-submenu = Menu(menubar, tearoff=0)
+#submenu = Menu(menubar, tearoff=0)
 
 
 # create the sub M
@@ -19,15 +19,15 @@ def browse_fileIM1():
     picturefile1 = filedialog.askopenfilename(filetypes=[("Image File", '.jpg')])
 
 
-menubar.add_cascade(label="File", menu=submenu)
-submenu.add_command(label="Open", command=browse_fileIM1)
-submenu.add_command(label="Exit", command=root.destroy)
+#menubar.add_cascade(label="File", menu=submenu)
+#submenu.add_command(label="Open", command=browse_fileIM1)
+#submenu.add_command(label="Exit", command=root.destroy)
 
-root.geometry("800x600")
-root.title("Picture")
+#root.geometry("800x600")
+#root.title("Picture")
 
-text = Label(root, text="Choose your picture")
-text.pack()
+#text = Label(root, text="Choose your picture")
+#text.pack()
 
 
 def playI1():
@@ -54,10 +54,10 @@ def stopIM1():
     print(picturefile1)
 
 
-play = Button(root, text="Open Image", width=30, command=playI1)
-play.pack()
+#play = Button(root, text="Open Image", width=30, command=playI1)
+#play.pack()
 
-stop = Button(root, text="Close Image", width=30, command=stopIM1)
-stop.pack()
+#stop = Button(root, text="Close Image", width=30, command=stopIM1)
+#stop.pack()
 
-root.mainloop()
+#root.mainloop()

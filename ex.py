@@ -1,7 +1,5 @@
-from tkinter import *
 import tast
 import Images
-import rules1
 import loadData
 import ugotMail
 import dateCalendar
@@ -11,6 +9,10 @@ import results
 import imagesOpponent
 import displayInt
 import displaying_txtData
+from tkinter import*
+
+
+
 
 root = Tk()
 root.title('Card Game engine')
@@ -108,22 +110,22 @@ insertButton.pack(side=TOP,padx=2,pady=5)
 """
 # ---------------------------------------Module Rules ----------------------------------------------------
 def rule1():
-    rules1.rules1()
+    pass
 
 def rule2():
-    rules1.rules2()
+    pass
 
 def rule3():
-    rules1.rules3()
+    pass
 
 def About():
-    rules1.About()
+    pass
 
 menu = Menu(root)
 root.config(menu=menu)
 rulemenu = Menu(menu)
 menu.add_cascade(label="File", menu=rulemenu)
-rulemenu.add_command(label="Rule 1", command=rules1)
+rulemenu.add_command(label="Rule 1", command=rule1)
 rulemenu.add_command(label="Rule 2 ", command=rule2)
 rulemenu.add_command(label="Rule 3 ", command=rule3)
 rulemenu.add_separator()
@@ -143,18 +145,18 @@ helpmenu.add_command(label="Help About Rules ...", command=About)
 def browseMF():
     tast.browse_file()
 
-printButton = Button(ctr_right, text="Browse Music File", command=browseMF,bg="medium orchid")
+printButton = Button(ctr_right, text="Browse Music File", command=browseMF,bg="IndianRed1")
 printButton.pack(side=TOP, padx=2, pady=5)
 
 def playM():
     tast.playM()
-insertButton = Button(ctr_right,text="Play Music", command =playM,bg="medium orchid")
+insertButton = Button(ctr_right,text="Play Music", command =playM,bg="IndianRed1")
 insertButton.pack(side=TOP,padx=2,pady=5)
 
 def stopM():
     tast.stopM()
 
-printButton = Button(ctr_right,text="Stop Music", command =stopM,bg="medium orchid")
+printButton = Button(ctr_right,text="Stop Music", command =stopM,bg="IndianRed1")
 printButton.pack(side=TOP,padx=2,pady=5)
 
 ctr_right.grid(row=0, column=2, sticky="ns")
@@ -254,7 +256,7 @@ printButton4.pack(side=TOP,padx=2,pady=5)
 def mathCards():
     displayCards.main()
 
-printButton5 = Button(ctr_right,text="Card vs Card", command =mathCards,bg="firebrick3")
+printButton5 = Button(ctr_right,text="Card vs Card", command =mathCards)
 printButton5.pack(side=TOP,padx=2,pady=5)
 
 #---------------------------------- Web Module
@@ -270,14 +272,14 @@ printButton6.pack(side=TOP,padx=2,pady=5,)
 def dispayingResults():
     results.showPicResults()
 
-printButton7 = Button(ctr_right,text="Display Cards entered", command =dispayingResults)
+printButton7 = Button(ctr_right,text="Display Cards entered", command =dispayingResults,bg="light sky blue")
 printButton7.pack(side=TOP,padx=2,pady=5)
 
 #------------------------------ display int
 def displayint():
     displayInt.displayint()
 
-printButton10 = Button(ctr_right,text="Display integers entered ", command =displayint,bg="OliveDrab2")
+printButton10 = Button(ctr_right,text="Display integers entered ", command =displayint,bg="light sky blue")
 printButton10.pack(side=TOP,padx=2,pady=5)
 
 # ------------------------------ display int to gui
@@ -289,11 +291,11 @@ printButton11.pack(side=TOP,padx=0,pady=0)
 
 
 
-# photos !!
+# -------------------------------------------------------- photos
+
 
 photo2 = PhotoImage(file="1949852.png")
 labelp2 = Label(root,image=photo2,bg="red3")
-
 labelp2.grid(row=4,sticky="s",pady = "2")
 
 # bottom pic
@@ -302,16 +304,13 @@ photo1 = PhotoImage(file="p1.gif")
 labelp1 = Label(root,image=photo1)
 labelp1.grid(row=0,sticky="s",padx= 5 ,pady = 5)
 
-
-# TKINTER DB PROGRAM
-
-
-
-#mbutton = Button(text = "Let's Go", command= openProgram).pack()
-
 def main ():
 
-   root.mainloop()
+    root.mainloop()
+
+
 
 if __name__ == '__main__':
+
+
     main()

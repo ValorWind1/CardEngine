@@ -2,10 +2,10 @@ from tkinter import *
 from tkinter import Label
 import ex
 
-root =Tk()
+#root =Tk()
 
-root.geometry("500x500")
-root.title("results ")
+#root.geometry("500x500")
+#root.title("results ")
 
 def displaynumbersGui():
     file = open("output.txt")
@@ -23,5 +23,5 @@ def displaynumbersGui():
     Results = Label(ex.ctr_mid, text = new_words,bg ="dodgerblue")
     Results.pack(side="bottom",padx=0,pady=0)
 
-root.mainloop ()
+#root.mainloop ()
 

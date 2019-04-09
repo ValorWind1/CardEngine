@@ -2,32 +2,35 @@ import tkinter.messagebox
 from tkinter import Label,Button,Menu,Tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
-
 import ex
 
-root =Tk()
 
-menubar = Menu(root)
-root.config(menu=menubar)
+background =Tk()
 
-submenu = Menu(menubar, tearoff=0)
-# create the sub M
+background.withdraw()
+
+#menubar = Menu(root)
+#root.config(menu=menubar)
+
+
+#submenu = Menu(menubar, tearoff=0)
+                             # create the sub M
 def browse_fileIM():
     global picturefile
     picturefile = filedialog.askopenfilename(filetypes=[("Image File", '.jpg')])
 
 
-menubar.add_cascade(label="File", menu= submenu)
-submenu.add_command(label="Open", command = browse_fileIM)
-submenu.add_command(label="Exit", command = root.destroy)
+#menubar.add_cascade(label="File", menu= submenu)
+#submenu.add_command(label="Open", command = browse_fileIM)
+#submenu.add_command(label="Exit", command = root.destroy)
 
 
 
-root.geometry("800x600")
-root.title("Picture")
+#root.geometry("800x600")
+#root.title("Picture")
 
-text = Label(root , text = "Choose your picture")
-text.pack()
+#text = Label(root , text = "Choose your picture")
+#text.pack()
 
 
 
@@ -59,11 +62,12 @@ def stopIM():
 
 
 
-play = Button(root,text="Open Image", width=30, command=playIM)
-play.pack()
+#play = Button(root,text="Open Image", width=30, command=playIM)
+#play.pack()
 
-stop = Button(root,text="Close Image", width=30, command=stopIM)
-stop.pack()
+#stop = Button(root,text="Close Image", width=30, command=stopIM)
+#stop.pack()
 
 
-root.mainloop()
+background.mainloop()
+background.deiconify()
