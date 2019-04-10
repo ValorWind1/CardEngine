@@ -58,7 +58,7 @@ center.grid_rowconfigure(0, weight=1)
 center.grid_columnconfigure(1, weight=1)
 
 ctr_left = Frame(center, bg='snow', width=500, height=250, padx=5, pady=5)
-ctr_mid = Frame(center, bg='linen', width=500, height=250, padx=5, pady=5)
+ctr_mid = Frame(center, bg='alice blue', width=500, height=250, padx=5, pady=5)
 ctr_right = Frame(center, bg='snow', width=500, height=250, padx=5, pady=5)
 
 label_2.grid(row=1, sticky="n",pady = "10")
@@ -328,7 +328,7 @@ labelp4.pack(side= LEFT,padx=0,pady=0)
 #labelp5.pack(side= LEFT,padx=0,pady=0)
 
 photo6 = PhotoImage(file ="vs-pn_small.png")
-labelp6 = Label(ctr_mid,image=photo6,bg="linen")
+labelp6 = Label(ctr_mid,image=photo6,bg="alice blue")
 labelp6.pack(side= BOTTOM,padx=0,pady=0)
 
 
