@@ -34,13 +34,14 @@ def playI1():
     try:
 
         global new_img1
+        global label2
         im = Image.open(picturefile1)
         new_img1 = im.resize((150, 250))
         new_img1.save("ImageFile1.png", "JPEG", optimize=True)
         tkimage = ImageTk.PhotoImage(new_img1)
-        label1 = Label(ex.ctr_mid, image=tkimage)
-        label1.image = tkimage
-        label1.pack(side="left", padx=2, pady=5)
+        label2 = Label(ex.ctr_mid, image=tkimage)
+        label2.image = tkimage
+        label2.pack(side="right", padx=2, pady=5)
 
 
 
@@ -51,7 +52,7 @@ def playI1():
 
 
 def stopIM1():
-    print(picturefile1)
+    label2.destroy()
 
 
 #play = Button(root, text="Open Image", width=30, command=playI1)

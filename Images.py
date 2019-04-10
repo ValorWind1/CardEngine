@@ -3,7 +3,8 @@ from tkinter import Label,Button,Menu,Tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
 import ex
-
+import time
+import psutil
 
 background =Tk()
 
@@ -40,6 +41,7 @@ def playIM():
     try:
 
         global new_img
+        global label1
         im = Image.open(picturefile)
         new_img = im.resize((150, 250))
         new_img.save("ImageFile.png", "JPEG", optimize=True)
@@ -56,7 +58,7 @@ def playIM():
         print("Error")
 
 def stopIM():
-    print (picturefile)
+    label1.destroy()
 
 
 
@@ -67,7 +69,6 @@ def stopIM():
 
 #stop = Button(root,text="Close Image", width=30, command=stopIM)
 #stop.pack()
-
-
 background.mainloop()
 background.deiconify()
+

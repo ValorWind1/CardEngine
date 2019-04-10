@@ -16,7 +16,7 @@ from tkinter import*
 
 root = Tk()
 root.title('Card Game engine')
-root.geometry('{}x{}'.format(1000,600))
+root.geometry('{}x{}'.format(1000,647))
 
 # Main  frames
 top_frame = Frame(root, bg='red3', width=650, height=700, pady=10)
@@ -173,7 +173,7 @@ insertButton1.pack(side=TOP,padx=2,pady=5)
 def stopIM():
     Images.stopIM()
 
-printButton2 = Button(ctr_left,text="Location of image", command =stopIM)
+printButton2 = Button(ctr_left,text="Stop Displaying Card", command =stopIM,bg="light coral")
 printButton2.pack(side=TOP,padx=2,pady=5)
 
 ctr_left.grid(row=0, column=0, sticky="ns")
@@ -192,6 +192,12 @@ printButton9 = Button(ctr_left,text="Display Opponent Card", command = playIMO, 
 printButton9.pack(side=TOP,padx=2,pady=5)
 
 ctr_left.grid(row=0, column=0, sticky="ns")
+
+def stopOp():
+    imagesOpponent.stopIM1()
+
+printButton13 = Button(ctr_left,text="Stop displaying opponen card", command = stopOp, bg= "dark turquoise")
+printButton13.pack(side=TOP,padx=2,pady=5)
 
 # ---------------------------------- end of picture Module --------------------------------------------------------
 
@@ -281,14 +287,20 @@ def displayguiint():
     displaying_txtData.displaynumbersGui()
 
 printButton11 = Button(ctr_left,text="Visually see values  ", command =displayguiint,bg="dodgerblue")
-printButton11.pack(side=TOP,padx=0,pady=0)
+printButton11.pack(side=TOP,padx=2,pady=5)
 
 # ----------------------------- multiplier
 
 def multipleCard():
     pass
 printButton12 = Button(ctr_right,text="Multiply card", command =multipleCard,bg="light sky blue")
-printButton12.pack(side=TOP,padx=0,pady=0)
+printButton12.pack(side=TOP,padx=2,pady=5)
+
+# ------------------------------ extra
+def multipleCard():
+    pass
+printButton12 = Button(ctr_right,text="Extra", command =multipleCard)
+printButton12.pack(side=TOP,padx=2,pady=5)
 # -------------------------------------------------------- photos
 
 
@@ -309,7 +321,7 @@ labelp3.pack(side= RIGHT,padx=0,pady=0)
 
 photo4 = PhotoImage(file ="rcLo6KGpileft.png")
 labelp4 = Label(ctr_left,image=photo4,bg="snow")
-labelp4.pack(side= LEFT,padx=2,pady=2)
+labelp4.pack(side= LEFT,padx=0,pady=0)
 
 
 
