@@ -323,6 +323,13 @@ photo4 = PhotoImage(file ="rcLo6KGpileft.png")
 labelp4 = Label(ctr_left,image=photo4,bg="snow")
 labelp4.pack(side= LEFT,padx=0,pady=0)
 
+#photo5 = PhotoImage(file ="car-with-wings-clipart-10 small.png")
+#labelp5 = Label(btm_frame ,image=photo5,bg="snow")
+#labelp5.pack(side= LEFT,padx=0,pady=0)
+
+photo6 = PhotoImage(file ="vs-pn_small.png")
+labelp6 = Label(ctr_mid,image=photo6,bg="linen")
+labelp6.pack(side= BOTTOM,padx=0,pady=0)
 
 
 
