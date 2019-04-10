@@ -57,9 +57,9 @@ label_2= Label(root, text = "Card Preview",bg ="snow")
 center.grid_rowconfigure(0, weight=1)
 center.grid_columnconfigure(1, weight=1)
 
-ctr_left = Frame(center, bg='snow', width=300, height=190, padx=5, pady=5)
-ctr_mid = Frame(center, bg='linen', width=300, height=190, padx=5, pady=5)
-ctr_right = Frame(center, bg='snow', width=300, height=190, padx=5, pady=5)
+ctr_left = Frame(center, bg='snow', width=500, height=250, padx=5, pady=5)
+ctr_mid = Frame(center, bg='linen', width=500, height=250, padx=5, pady=5)
+ctr_right = Frame(center, bg='snow', width=500, height=250, padx=5, pady=5)
 
 label_2.grid(row=1, sticky="n",pady = "10")
 ctr_left.grid(row=0, column=0, sticky="ns")
@@ -283,8 +283,12 @@ def displayguiint():
 printButton11 = Button(ctr_left,text="Visually see values  ", command =displayguiint,bg="dodgerblue")
 printButton11.pack(side=TOP,padx=0,pady=0)
 
+# ----------------------------- multiplier
 
-
+def multipleCard():
+    pass
+printButton12 = Button(ctr_right,text="Multiply card", command =multipleCard,bg="light sky blue")
+printButton12.pack(side=TOP,padx=0,pady=0)
 # -------------------------------------------------------- photos
 
 
@@ -300,12 +304,12 @@ labelp1.grid(row=0,sticky="s",padx= 5 ,pady = 5)
 
 photo3 = PhotoImage(file ="rcLo6KGpi.png")
 labelp3 = Label(ctr_right,image=photo3,bg="snow")
-labelp3.pack(side= BOTTOM,padx=0,pady=0)
+labelp3.pack(side= RIGHT,padx=0,pady=0)
 
 
-photo4 = PhotoImage(file ="laurel-wreath-transparent-1154small.png")
+photo4 = PhotoImage(file ="rcLo6KGpileft.png")
 labelp4 = Label(ctr_left,image=photo4,bg="snow")
-labelp4.pack(side= BOTTOM,padx=0,pady=0)
+labelp4.pack(side= LEFT,padx=2,pady=2)
 
 
 
