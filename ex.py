@@ -10,7 +10,7 @@ import imagesOpponent
 import displayInt
 import displaying_txtData
 from tkinter import*
-
+import animation
 
 
 
@@ -292,8 +292,11 @@ printButton11.pack(side=TOP,padx=2,pady=5)
 # ----------------------------- multiplier
 
 def multipleCard():
-    pass
-printButton12 = Button(ctr_right,text="Multiply card", command =multipleCard,bg="light sky blue",height = 1 ,width =18)
+    animation.main()
+
+
+
+printButton12 = Button(ctr_right,text="animate card", command =multipleCard,bg="light sky blue",height = 1 ,width =18)
 printButton12.pack(side=TOP,padx=2,pady=5)
 
 # ------------------------------ extra
