@@ -139,18 +139,18 @@ helpmenu.add_command(label="Help About Rules ...", command=About)
 def browseMF():
     tast.browse_file()
 
-printButton = Button(ctr_right, text="Browse Music File", command=browseMF,bg="IndianRed1")
+printButton = Button(ctr_right, text="Browse Music File", command=browseMF,bg="IndianRed1",height = 1 ,width =18)
 printButton.pack(side=TOP, padx=2, pady=5)
 
 def playM():
     tast.playM()
-insertButton = Button(ctr_right,text="Play Music", command =playM,bg="IndianRed1")
+insertButton = Button(ctr_right,text="Play Music", command =playM,bg="IndianRed1",height = 1 ,width =18)
 insertButton.pack(side=TOP,padx=2,pady=5)
 
 def stopM():
     tast.stopM()
 
-printButton = Button(ctr_right,text="Stop Music", command =stopM,bg="IndianRed1")
+printButton = Button(ctr_right,text="Stop Music", command =stopM,bg="IndianRed1",height = 1 ,width =18)
 printButton.pack(side=TOP,padx=2,pady=5)
 
 ctr_right.grid(row=0, column=2, sticky="ns")
@@ -161,19 +161,19 @@ ctr_right.grid(row=0, column=2, sticky="ns")
 def browseIM():
     Images.browse_fileIM()
 
-insertButton2 = Button(ctr_left,text=" Browse Your Card Image", command =browseIM,bg="light coral")
+insertButton2 = Button(ctr_left,text=" Browse Your Card Image", command =browseIM,bg="light coral",height = 1 ,width =23)
 insertButton2.pack(side=TOP,padx=2,pady=5)
 
 def playIM():
     Images.playIM()
 
-insertButton1 = Button(ctr_left,text="Display Your Card", command= playIM,bg="light coral")
+insertButton1 = Button(ctr_left,text="Display Your Card", command= playIM,bg="light coral",height = 1 ,width =23)
 insertButton1.pack(side=TOP,padx=2,pady=5)
 
 def stopIM():
     Images.stopIM()
 
-printButton2 = Button(ctr_left,text="Stop Displaying Card", command =stopIM,bg="light coral")
+printButton2 = Button(ctr_left,text="Stop Displaying Card", command =stopIM,bg="light coral",height = 1 ,width =23)
 printButton2.pack(side=TOP,padx=2,pady=5)
 
 ctr_left.grid(row=0, column=0, sticky="ns")
@@ -181,14 +181,14 @@ ctr_left.grid(row=0, column=0, sticky="ns")
 def BrowseIMO():
     imagesOpponent.browse_fileIM1()
 
-insertButton8 = Button(ctr_left,text=" Browse Opponent Card Image", command = BrowseIMO, bg= "dark turquoise")
+insertButton8 = Button(ctr_left,text=" Browse Opponent Card Image", command = BrowseIMO, bg= "dark turquoise",height = 1 ,width =23)
 insertButton8.pack(side=TOP,padx=2,pady=5)
 
 
 def playIMO():
     imagesOpponent.playI1()
 
-printButton9 = Button(ctr_left,text="Display Opponent Card", command = playIMO, bg= "dark turquoise")
+printButton9 = Button(ctr_left,text="Display Opponent Card", command = playIMO, bg= "dark turquoise",height = 1 ,width =23)
 printButton9.pack(side=TOP,padx=2,pady=5)
 
 ctr_left.grid(row=0, column=0, sticky="ns")
@@ -196,7 +196,7 @@ ctr_left.grid(row=0, column=0, sticky="ns")
 def stopOp():
     imagesOpponent.stopIM1()
 
-printButton13 = Button(ctr_left,text="Stop displaying opponen card", command = stopOp, bg= "dark turquoise")
+printButton13 = Button(ctr_left,text="Stop displaying opponen card", command = stopOp, bg= "dark turquoise",height = 1 ,width =23)
 printButton13.pack(side=TOP,padx=2,pady=5)
 
 # ---------------------------------- end of picture Module --------------------------------------------------------
@@ -205,7 +205,7 @@ printButton13.pack(side=TOP,padx=2,pady=5)
 
 def openProgram():
     loadData.main()
-printButton3 = Button(ctr_left,text=" Create cards", command =openProgram)
+printButton3 = Button(ctr_left,text=" Create cards", command =openProgram,height = 1 ,width =23)
 printButton3.pack(side=TOP,padx=2,pady=5)
 
 #def saveData():
@@ -250,13 +250,13 @@ g.grid(row=4,sticky="sw",padx= "5",pady = "20")
 def printcards():
     displayCards.openCards()
 
-printButton4 = Button(ctr_right,text=" All cards info.", command =printcards)
+printButton4 = Button(ctr_right,text=" All cards info.", command =printcards ,height = 1 ,width =18)
 printButton4.pack(side=TOP,padx=2,pady=5)
 
 def mathCards():
     displayCards.main()
 
-printButton5 = Button(ctr_right,text="Card vs Card", command =mathCards)
+printButton5 = Button(ctr_right,text="Card vs Card", command =mathCards,height = 1 ,width =18)
 printButton5.pack(side=TOP,padx=2,pady=5)
 
 #---------------------------------- Web Module
@@ -264,7 +264,7 @@ printButton5.pack(side=TOP,padx=2,pady=5)
 def openingWebsite():
     myWeb.main()
 
-printButton6 = Button(ctr_left,text=" Card Website", command =openingWebsite,bg="gold")
+printButton6 = Button(ctr_left,text=" Card Website", command =openingWebsite,bg="gold",height = 1 ,width =23)
 printButton6.pack(side=TOP,padx=2,pady=5,)
 #2nd row of buttons
 
@@ -272,28 +272,28 @@ printButton6.pack(side=TOP,padx=2,pady=5,)
 def dispayingResults():
     results.showPicResults()
 
-printButton7 = Button(ctr_right,text="Display Cards entered", command =dispayingResults,bg="light sky blue")
+printButton7 = Button(ctr_right,text="Display Cards entered", command =dispayingResults,bg="light sky blue",height = 1 ,width =18)
 printButton7.pack(side=TOP,padx=2,pady=5)
 
 #------------------------------ display int
 def displayint():
     displayInt.displayint()
 
-printButton10 = Button(ctr_right,text="Display integers entered ", command =displayint,bg="light sky blue")
+printButton10 = Button(ctr_right,text="Display integers entered ", command =displayint,bg="light sky blue",height = 1 ,width =18)
 printButton10.pack(side=TOP,padx=2,pady=5)
 
 # ------------------------------ display int to gui
 def displayguiint():
     displaying_txtData.displaynumbersGui()
 
-printButton11 = Button(ctr_left,text="Visually see values  ", command =displayguiint,bg="dodgerblue")
+printButton11 = Button(ctr_left,text="Visually see values  ", command =displayguiint,bg="dodgerblue",height = 1 ,width =23)
 printButton11.pack(side=TOP,padx=2,pady=5)
 
 # ----------------------------- multiplier
 
 def multipleCard():
     pass
-printButton12 = Button(ctr_right,text="Multiply card", command =multipleCard,bg="light sky blue")
+printButton12 = Button(ctr_right,text="Multiply card", command =multipleCard,bg="light sky blue",height = 1 ,width =18)
 printButton12.pack(side=TOP,padx=2,pady=5)
 
 # ------------------------------ extra
