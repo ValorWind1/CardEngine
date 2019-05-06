@@ -54,7 +54,7 @@ def playIM():
 
 
     except:
-        tkinter.messagebox.showerror(" You have not selected a File","You have not selected a File, Try again")
+        tkinter.messagebox.showerror(" You have not selected a File","You have not selected a File correct File Image, Try again")
         print("Error")
 
 def stopIM():

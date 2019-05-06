@@ -1,2 +1,2 @@
-EMAIL_ADDRESS= ""
+EMAIL_ADDRESS= "skyjdani@gmail.com"
 PASSWORD = ""
